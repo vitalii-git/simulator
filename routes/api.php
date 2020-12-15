@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('start-season', \App\Http\Controllers\SimulationController::class . '@startSeason');
+
+Route::get('next-stage/{season}', \App\Http\Controllers\SimulationController::class . '@nextStage');
+Route::get('finish-season/{season}',\App\Http\Controllers\SimulationController::class . '@finishSeason');
