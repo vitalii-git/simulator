@@ -8,9 +8,16 @@ use App\Models\Season;
 use App\Models\SeasonCalendar;
 use App\Models\Team;
 
+/**
+ * Class CalendarService
+ * @package App\Services
+ */
 class CalendarService
 {
 
+    /**
+     * @return \Illuminate\Support\Collection
+     */
     public function startSeason()
     {
         $seasonId = $this->createNewSeason();
